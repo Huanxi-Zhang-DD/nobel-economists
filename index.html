@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#173e35" />
+    <meta
+      name="description"
+      content="Explore all 99 Nobel economics laureates from 1969 to 2025. Discover the people, ideas, and institutions that shaped economics."
+    />
+    <title>Nobel Economists — An atlas of ideas</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="data/laureates.js" defer></script>
+    <script src="data/enrichment.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="lineage.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#archive">Skip to the archive</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Nobel Economists home"
+        ><span class="brand-mark" aria-hidden="true">N<span>e</span></span
+        ><span>Nobel Economists<small>AN ATLAS OF IDEAS</small></span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#archive" class="nav-active">The archive</a
+        ><a href="#archive" id="timeline-nav">Timeline</a
+        ><a href="#lineage">Academic lineages</a><a href="#about">About</a>
+      </nav>
+      <span class="header-date" data-range>1969–2025</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="tiny-star" aria-hidden="true">✳</span> THE PEOPLE
+            BEHIND THE IDEAS
+          </p>
+          <h1 id="hero-title">A world of<br />economic <em>thought.</em></h1>
+          <p class="hero-description">
+            From how markets work to why nations prosper.<br />
+            Meet the minds that changed our understanding of the economy.
+          </p>
+          <a class="explore-link" href="#archive"
+            >Explore the laureates <span aria-hidden="true">↗</span></a
+          >
+          <dl class="hero-stats">
+            <div>
+              <dt>Laureates</dt>
+              <dd data-total>99</dd>
+            </div>
+            <div>
+              <dt>Award years</dt>
+              <dd data-years>57</dd>
+            </div>
+            <div>
+              <dt>Years of ideas</dt>
+              <dd data-range>1969–2025</dd>
+            </div>
+          </dl>
+        </div>
+        <div
+          id="hero-art"
+          class="hero-art"
+          aria-label="The 2025 laureates: Joel Mokyr, Philippe Aghion, and Peter Howitt"
+        >
+          <svg
+            class="orbit"
+            viewBox="0 0 600 450"
+            fill="none"
+            aria-hidden="true"
+          >
+            <ellipse
+              cx="320"
+              cy="215"
+              rx="240"
+              ry="180"
+              stroke="currentColor"
+            />
+            <ellipse
+              cx="320"
+              cy="215"
+              rx="180"
+              ry="180"
+              stroke="currentColor"
+            />
+            <ellipse
+              cx="320"
+              cy="215"
+              rx="100"
+              ry="180"
+              stroke="currentColor"
+            />
+            <path
+              d="M80 215H560M106 130H534M110 300H530"
+              stroke="currentColor"
+            />
+            <circle cx="98" cy="160" r="5" fill="currentColor" />
+            <circle cx="499" cy="335" r="5" fill="currentColor" />
+          </svg>
+          <div class="hero-portraits" id="hero-portraits"></div>
+          <div class="hero-caption">
+            <span class="caption-line"></span
+            ><span
+              ><strong id="latest-title">The 2025 laureates</strong
+              ><small id="latest-theme"
+                >Understanding innovation-driven growth</small
+              ></span
+            ><span class="caption-star" aria-hidden="true">✳</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="archive" id="archive" aria-labelledby="archive-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE COLLECTION</p>
+            <h2 id="archive-heading">
+              Discover the laureates<span class="heading-dot">.</span>
+            </h2>
+          </div>
+          <p>One prize. Many ways to understand the world.</p>
+        </div>
+        <div class="decades" role="group" aria-label="Browse an award decade">
+          <button data-decade="all" aria-pressed="true">All years</button
+          ><button data-decade="1960" aria-pressed="false">1960s</button
+          ><button data-decade="1970" aria-pressed="false">1970s</button
+          ><button data-decade="1980" aria-pressed="false">1980s</button
+          ><button data-decade="1990" aria-pressed="false">1990s</button
+          ><button data-decade="2000" aria-pressed="false">2000s</button
+          ><button data-decade="2010" aria-pressed="false">2010s</button
+          ><button data-decade="2020" aria-pressed="false">2020s</button
+          ><span class="decade-end" data-range>1969–2025</span>
+        </div>
+        <div class="archive-layout">
+          <aside class="filter-panel" aria-label="Filter laureates">
+            <div class="filter-heading">
+              <h3>Refine your discovery</h3>
+              <button class="text-button" id="reset">Reset</button>
+            </div>
+            <label for="search">SEARCH BY NAME</label>
+            <div class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.5" cy="10.5" r="6.5" />
+                <path d="m16 16 5 5" /></svg
+              ><input
+                id="search"
+                type="search"
+                placeholder="Find an economist…"
+                autocomplete="off"
+              />
+            </div>
+            <label for="field">RESEARCH FIELD</label
+            ><select id="field">
+              <option value="">All fields</option>
+            </select>
+            <label for="institution">INSTITUTION</label
+            ><select id="institution">
+              <option value="">All institutions</option>
+            </select>
+            <label for="year">AWARD YEAR</label
+            ><select id="year">
+              <option value="">All years</option>
+            </select>
+            <p class="filter-note">
+              Institutions shown are affiliations at the time of the award.
+            </p>
+            <div class="discovery-note">
+              <span aria-hidden="true">↗</span>
+              <h4>Follow an idea.</h4>
+              <p>
+                Choose a field to see how generations of economists approached
+                the same big questions.
+              </p>
+              <button id="growth-shortcut">
+                Explore economic growth <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </aside>
+          <div class="results">
+            <div class="results-toolbar">
+              <p id="result-count" role="status" aria-live="polite">
+                Loading the collection…
+              </p>
+              <div class="result-controls">
+                <label for="sort" class="sr-only">Sort laureates</label
+                ><select id="sort">
+                  <option value="newest">Newest first</option>
+                  <option value="oldest">Oldest first</option>
+                  <option value="name">Name A–Z</option>
+                </select>
+                <div class="view-switch" role="group" aria-label="View style">
+                  <button
+                    id="grid-view"
+                    aria-label="Card view"
+                    aria-pressed="true"
+                  >
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <rect x="2" y="2" width="6" height="6" />
+                      <rect x="12" y="2" width="6" height="6" />
+                      <rect x="2" y="12" width="6" height="6" />
+                      <rect x="12" y="12" width="6" height="6" />
+                    </svg></button
+                  ><button
+                    id="timeline-view"
+                    aria-label="Timeline view"
+                    aria-pressed="false"
+                  >
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M5 2v16M10 5h8M10 10h8M10 15h8" />
+                      <circle cx="5" cy="5" r="1.5" />
+                      <circle cx="5" cy="10" r="1.5" />
+                      <circle cx="5" cy="15" r="1.5" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              id="active-filters"
+              class="active-filters"
+              aria-label="Active filters"
+            ></div>
+            <div id="cards" class="cards"></div>
+            <div id="empty-state" class="empty-state" hidden>
+              <span aria-hidden="true">∅</span>
+              <h3>No laureates found</h3>
+              <p>Try another name, field, institution, or year.</p>
+              <button id="empty-reset" class="solid-button">
+                Clear all filters
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="lineage-section"
+        id="lineage"
+        aria-labelledby="lineage-heading"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PEOPLE, MENTORS & IDEAS</p>
+            <h2 id="lineage-heading">
+              How ideas travel<span class="heading-dot">.</span>
+            </h2>
+          </div>
+          <p>Follow a scholar. Discover the next generation.</p>
+        </div>
+        <p class="lineage-intro">
+          Explore documented doctoral relationships, then visit students’
+          academic homepages to see where their work has led. Select a person in
+          the network to read the evidence; select another laureate to continue
+          the journey.
+        </p>
+        <div class="lineage-toolbar">
+          <div>
+            <label for="lineage-focus">CHOOSE A LAUREATE</label
+            ><select id="lineage-focus"></select>
+          </div>
+          <p id="lineage-count"></p>
+        </div>
+        <div
+          id="lineage-shortcuts"
+          class="lineage-shortcuts"
+          role="group"
+          aria-label="Explore a documented lineage"
+        ></div>
+        <div class="network-legend">
+          <span><i></i> Doctoral adviser</span
+          ><span><i class="coadvisor-key"></i> Co-adviser</span
+          ><span><i class="committee-key"></i> Dissertation committee</span
+          ><span><b>★</b> Nobel laureate</span>
+        </div>
+        <div
+          class="network-scroll"
+          tabindex="0"
+          role="region"
+          aria-label="Academic relationship network; scroll horizontally on small screens"
+        >
+          <div id="lineage-canvas" class="lineage-canvas"></div>
+        </div>
+        <p class="network-hint">
+          Arrows run from adviser or committee member to PhD student. On a small
+          screen, swipe across the graph. Every node is also a
+          keyboard-accessible button.
+        </p>
+        <div
+          id="lineage-inspector"
+          class="lineage-inspector"
+          aria-live="polite"
+        ></div>
+        <details class="lineage-method">
+          <summary>What this network includes</summary>
+          <p>
+            This is a curated, source-backed sample, not a complete alumni
+            directory or a ranking of economics. Only explicitly documented
+            doctoral advisers, co-advisers, and dissertation committee
+            relationships are drawn. Collaboration, intellectual influence,
+            undergraduate supervision, and sharing a university do not by
+            themselves create an edge. Missing links reflect research coverage,
+            not the absence of students. Career summaries are tied to their
+            cited sources and check dates; historical appointments are
+            identified as such.
+          </p>
+          <p>
+            Life stories are short sourced accounts in each laureate’s profile.
+            Personal stories are kept separate from academic relationships.
+          </p>
+        </details>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-heading">
+        <div>
+          <p class="eyebrow">ABOUT THIS ATLAS</p>
+          <h2 id="about-heading">Big ideas deserve<br />an open door.</h2>
+        </div>
+        <div>
+          <p>
+            This independent educational archive brings together every recipient
+            of the
+            <strong
+              >Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred
+              Nobel</strong
+            >
+            from <span data-range>1969–2025</span>.
+          </p>
+          <p>
+            Names, award years, and award-time affiliations come from
+            NobelPrize.org. Research fields are editorial browsing tags, and
+            contributions are explained in plain language. Each profile connects
+            you to original sources, documented academic relationships, and a
+            short life story.
+          </p>
+          <a
+            href="https://www.nobelprize.org/prizes/lists/all-prizes-in-economic-sciences/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit the official Nobel Prize archive
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="footer-brand" href="index.html">Nobel Economists</a>
+      <p>
+        An independent guide to economic thought ·
+        <span data-range>1969–2025</span>
+      </p>
+      <a href="#hero-title">Back to top ↑</a>
+    </footer>
+    <dialog id="profile" aria-labelledby="profile-name">
+      <div class="dialog-toolbar">
+        <button
+          id="close-profile"
+          class="close-button"
+          aria-label="Close profile"
+        >
+          ×
+        </button>
+      </div>
+      <div id="profile-content"></div>
+    </dialog>
+    <noscript
+      ><div class="noscript">
+        Enable JavaScript to search and browse this archive. The
+        <a
+          href="https://www.nobelprize.org/prizes/lists/all-prizes-in-economic-sciences/"
+          >official Nobel Prize list</a
+        >
+        is also available.
+      </div></noscript
+    >
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "checkedOn": "2026-10-06",
+  "source": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=eco&nobelPrizeYear=1969&yearTo=2026&limit=200",
+  "latestYear": 2025,
+  "added": []
+}

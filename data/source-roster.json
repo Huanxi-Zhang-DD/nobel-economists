@@ -1,0 +1,501 @@
+{
+  "source": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=eco&nobelPrizeYear=1969&yearTo=2025&limit=200",
+  "verifiedOn": "2026-10-06",
+  "laureates": [
+    {
+      "id": "1058",
+      "year": 2025,
+      "name": "Joel Mokyr"
+    },
+    {
+      "id": "1059",
+      "year": 2025,
+      "name": "Philippe Aghion"
+    },
+    {
+      "id": "1060",
+      "year": 2025,
+      "name": "Peter Howitt"
+    },
+    {
+      "id": "1044",
+      "year": 2024,
+      "name": "Daron Acemoglu"
+    },
+    {
+      "id": "1045",
+      "year": 2024,
+      "name": "Simon Henry Roberts Johnson"
+    },
+    {
+      "id": "1046",
+      "year": 2024,
+      "name": "James A. Robinson"
+    },
+    {
+      "id": "1034",
+      "year": 2023,
+      "name": "Claudia Goldin"
+    },
+    {
+      "id": "1021",
+      "year": 2022,
+      "name": "Ben S. Bernanke"
+    },
+    {
+      "id": "1022",
+      "year": 2022,
+      "name": "Douglas W. Diamond"
+    },
+    {
+      "id": "1023",
+      "year": 2022,
+      "name": "Philip H. Dybvig"
+    },
+    {
+      "id": "1007",
+      "year": 2021,
+      "name": "David Card"
+    },
+    {
+      "id": "1008",
+      "year": 2021,
+      "name": "Joshua D. Angrist"
+    },
+    {
+      "id": "1009",
+      "year": 2021,
+      "name": "Guido W. Imbens"
+    },
+    {
+      "id": "995",
+      "year": 2020,
+      "name": "Paul R. Milgrom"
+    },
+    {
+      "id": "996",
+      "year": 2020,
+      "name": "Robert B. Wilson"
+    },
+    {
+      "id": "982",
+      "year": 2019,
+      "name": "Abhijit Banerjee"
+    },
+    {
+      "id": "983",
+      "year": 2019,
+      "name": "Esther Duflo"
+    },
+    {
+      "id": "984",
+      "year": 2019,
+      "name": "Michael Kremer"
+    },
+    {
+      "id": "968",
+      "year": 2018,
+      "name": "William D. Nordhaus"
+    },
+    {
+      "id": "969",
+      "year": 2018,
+      "name": "Paul M. Romer"
+    },
+    {
+      "id": "949",
+      "year": 2017,
+      "name": "Richard H. Thaler"
+    },
+    {
+      "id": "935",
+      "year": 2016,
+      "name": "Oliver Hart"
+    },
+    {
+      "id": "936",
+      "year": 2016,
+      "name": "Bengt Holmström"
+    },
+    {
+      "id": "926",
+      "year": 2015,
+      "name": "Angus Deaton"
+    },
+    {
+      "id": "915",
+      "year": 2014,
+      "name": "Jean Tirole"
+    },
+    {
+      "id": "894",
+      "year": 2013,
+      "name": "Eugene F. Fama"
+    },
+    {
+      "id": "895",
+      "year": 2013,
+      "name": "Lars Peter Hansen"
+    },
+    {
+      "id": "896",
+      "year": 2013,
+      "name": "Robert J. Shiller"
+    },
+    {
+      "id": "882",
+      "year": 2012,
+      "name": "Alvin E. Roth"
+    },
+    {
+      "id": "883",
+      "year": 2012,
+      "name": "Lloyd S. Shapley"
+    },
+    {
+      "id": "872",
+      "year": 2011,
+      "name": "Thomas J. Sargent"
+    },
+    {
+      "id": "873",
+      "year": 2011,
+      "name": "Christopher A. Sims"
+    },
+    {
+      "id": "856",
+      "year": 2010,
+      "name": "Peter A. Diamond"
+    },
+    {
+      "id": "857",
+      "year": 2010,
+      "name": "Dale T. Mortensen"
+    },
+    {
+      "id": "858",
+      "year": 2010,
+      "name": "Christopher A. Pissarides"
+    },
+    {
+      "id": "846",
+      "year": 2009,
+      "name": "Elinor Ostrom"
+    },
+    {
+      "id": "847",
+      "year": 2009,
+      "name": "Oliver E. Williamson"
+    },
+    {
+      "id": "834",
+      "year": 2008,
+      "name": "Paul Krugman"
+    },
+    {
+      "id": "820",
+      "year": 2007,
+      "name": "Leonid Hurwicz"
+    },
+    {
+      "id": "821",
+      "year": 2007,
+      "name": "Eric S. Maskin"
+    },
+    {
+      "id": "822",
+      "year": 2007,
+      "name": "Roger B. Myerson"
+    },
+    {
+      "id": "807",
+      "year": 2006,
+      "name": "Edmund S. Phelps"
+    },
+    {
+      "id": "799",
+      "year": 2005,
+      "name": "Robert J. Aumann"
+    },
+    {
+      "id": "800",
+      "year": 2005,
+      "name": "Thomas C. Schelling"
+    },
+    {
+      "id": "786",
+      "year": 2004,
+      "name": "Finn E. Kydland"
+    },
+    {
+      "id": "787",
+      "year": 2004,
+      "name": "Edward C. Prescott"
+    },
+    {
+      "id": "771",
+      "year": 2003,
+      "name": "Robert F. Engle III"
+    },
+    {
+      "id": "772",
+      "year": 2003,
+      "name": "Clive W.J. Granger"
+    },
+    {
+      "id": "759",
+      "year": 2002,
+      "name": "Daniel Kahneman"
+    },
+    {
+      "id": "760",
+      "year": 2002,
+      "name": "Vernon L. Smith"
+    },
+    {
+      "id": "744",
+      "year": 2001,
+      "name": "George A. Akerlof"
+    },
+    {
+      "id": "745",
+      "year": 2001,
+      "name": "A. Michael Spence"
+    },
+    {
+      "id": "746",
+      "year": 2001,
+      "name": "Joseph E. Stiglitz"
+    },
+    {
+      "id": "732",
+      "year": 2000,
+      "name": "James J. Heckman"
+    },
+    {
+      "id": "733",
+      "year": 2000,
+      "name": "Daniel L. McFadden"
+    },
+    {
+      "id": "720",
+      "year": 1999,
+      "name": "Robert A. Mundell"
+    },
+    {
+      "id": "719",
+      "year": 1998,
+      "name": "Amartya Sen"
+    },
+    {
+      "id": "717",
+      "year": 1997,
+      "name": "Robert C. Merton"
+    },
+    {
+      "id": "718",
+      "year": 1997,
+      "name": "Myron S. Scholes"
+    },
+    {
+      "id": "715",
+      "year": 1996,
+      "name": "James A. Mirrlees"
+    },
+    {
+      "id": "716",
+      "year": 1996,
+      "name": "William Vickrey"
+    },
+    {
+      "id": "714",
+      "year": 1995,
+      "name": "Robert E. Lucas Jr."
+    },
+    {
+      "id": "711",
+      "year": 1994,
+      "name": "John C. Harsanyi"
+    },
+    {
+      "id": "712",
+      "year": 1994,
+      "name": "John F. Nash Jr."
+    },
+    {
+      "id": "713",
+      "year": 1994,
+      "name": "Reinhard Selten"
+    },
+    {
+      "id": "709",
+      "year": 1993,
+      "name": "Robert W. Fogel"
+    },
+    {
+      "id": "710",
+      "year": 1993,
+      "name": "Douglass C. North"
+    },
+    {
+      "id": "708",
+      "year": 1992,
+      "name": "Gary S. Becker"
+    },
+    {
+      "id": "707",
+      "year": 1991,
+      "name": "Ronald H. Coase"
+    },
+    {
+      "id": "704",
+      "year": 1990,
+      "name": "Harry M. Markowitz"
+    },
+    {
+      "id": "705",
+      "year": 1990,
+      "name": "Merton H. Miller"
+    },
+    {
+      "id": "706",
+      "year": 1990,
+      "name": "William F. Sharpe"
+    },
+    {
+      "id": "703",
+      "year": 1989,
+      "name": "Trygve Haavelmo"
+    },
+    {
+      "id": "702",
+      "year": 1988,
+      "name": "Maurice Allais"
+    },
+    {
+      "id": "701",
+      "year": 1987,
+      "name": "Robert M. Solow"
+    },
+    {
+      "id": "700",
+      "year": 1986,
+      "name": "James M. Buchanan Jr."
+    },
+    {
+      "id": "699",
+      "year": 1985,
+      "name": "Franco Modigliani"
+    },
+    {
+      "id": "698",
+      "year": 1984,
+      "name": "Richard Stone"
+    },
+    {
+      "id": "697",
+      "year": 1983,
+      "name": "Gerard Debreu"
+    },
+    {
+      "id": "696",
+      "year": 1982,
+      "name": "George J. Stigler"
+    },
+    {
+      "id": "695",
+      "year": 1981,
+      "name": "James Tobin"
+    },
+    {
+      "id": "694",
+      "year": 1980,
+      "name": "Lawrence R. Klein"
+    },
+    {
+      "id": "692",
+      "year": 1979,
+      "name": "Theodore W. Schultz"
+    },
+    {
+      "id": "693",
+      "year": 1979,
+      "name": "Sir Arthur Lewis"
+    },
+    {
+      "id": "691",
+      "year": 1978,
+      "name": "Herbert A. Simon"
+    },
+    {
+      "id": "689",
+      "year": 1977,
+      "name": "Bertil Ohlin"
+    },
+    {
+      "id": "690",
+      "year": 1977,
+      "name": "James E. Meade"
+    },
+    {
+      "id": "688",
+      "year": 1976,
+      "name": "Milton Friedman"
+    },
+    {
+      "id": "686",
+      "year": 1975,
+      "name": "Leonid Vitaliyevich Kantorovich"
+    },
+    {
+      "id": "687",
+      "year": 1975,
+      "name": "Tjalling C. Koopmans"
+    },
+    {
+      "id": "684",
+      "year": 1974,
+      "name": "Gunnar Myrdal"
+    },
+    {
+      "id": "685",
+      "year": 1974,
+      "name": "Friedrich August von Hayek"
+    },
+    {
+      "id": "683",
+      "year": 1973,
+      "name": "Wassily Wassilyevich Leontief"
+    },
+    {
+      "id": "681",
+      "year": 1972,
+      "name": "John R. Hicks"
+    },
+    {
+      "id": "682",
+      "year": 1972,
+      "name": "Kenneth J. Arrow"
+    },
+    {
+      "id": "680",
+      "year": 1971,
+      "name": "Simon Kuznets"
+    },
+    {
+      "id": "679",
+      "year": 1970,
+      "name": "Paul A. Samuelson"
+    },
+    {
+      "id": "677",
+      "year": 1969,
+      "name": "Ragnar Frisch"
+    },
+    {
+      "id": "678",
+      "year": 1969,
+      "name": "Jan Tinbergen"
+    }
+  ]
+}
