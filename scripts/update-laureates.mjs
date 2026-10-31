@@ -16,6 +16,14 @@ const aliases = {
   "London School of Economics": "LSE",
 };
 
+export function assertCompleteArchive(official, people) {
+  const ids = new Set(official.filter((person) => person.nobelPrizes?.some(
+    (prize) => prize.category?.en === "Economic Sciences",
+  )).map((person) => String(person.id)));
+  if (ids.size < 99 || people.some((person) => !ids.has(person.id)))
+    throw new Error("Incomplete Nobel archive; local files were not changed.");
+}
+
 export function addNewLaureates(official, people, enrichment, roster, date) {
   const ids = new Set(people.map((person) => person.id));
   const added = [];
@@ -31,7 +39,9 @@ export function addNewLaureates(official, people, enrichment, roster, date) {
     const nobelUrl = award.links?.find((link) =>
       link.class?.includes("laureate facts"),
     )?.href;
-    if (!name || !nobelUrl?.startsWith("https://www.nobelprize.org/"))
+    const year = Number(award.awardYear);
+    if (!name || !/^https:\/\/www\.nobelprize\.org\/prizes\/economic-sciences\//.test(nobelUrl || "") ||
+        !Number.isInteger(year) || year > new Date().getUTCFullYear() || !person.id)
       throw new Error(`Incomplete official record: ${id}`);
     const affiliations = (award.affiliations || [])
       .map((affiliation) => {
@@ -42,7 +52,7 @@ export function addNewLaureates(official, people, enrichment, roster, date) {
           : name;
       })
       .filter(Boolean);
-    const year = Number(award.awardYear);
+    const prizeMotivation = award.motivation?.en?.trim() || null;
     added.push({
       id,
       name,
@@ -56,7 +66,9 @@ export function addNewLaureates(official, people, enrichment, roster, date) {
         : ["Not listed"],
       institutionBasis: "affiliation at award",
       fields: ["Pending classification"],
+      prizeMotivation,
       contribution:
+        (prizeMotivation ? `The official Nobel Prize citation recognizes this laureate ${prizeMotivation}. ` : "") +
         "A plain-language explanation of this laureate’s contribution is awaiting editorial review. Visit the official Nobel Prize profile for the confirmed award citation and announcement materials.",
       nobelUrl,
       prizeShare: award.portion,
@@ -101,7 +113,7 @@ export function addNewLaureates(official, people, enrichment, roster, date) {
       ? {
           source: endpoint,
           verifiedOn: date,
-          laureates: profiles.map(({ id, name, year }) => ({ id, name, year })),
+          laureates: profiles.map(({ id, name, year }) => ({ id, year, name })),
         }
       : roster,
   };
@@ -110,6 +122,10 @@ export function addNewLaureates(official, people, enrichment, roster, date) {
 async function update() {
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
   const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+  const write = (file, content) => fs.writeFileSync(
+    path.join(root, file),
+    read(file).includes("\r\n") ? content.replace(/\r?\n/g, "\r\n") : content,
+  );
   const context = { window: {} };
   vm.runInNewContext(read("data/laureates.js"), context);
   vm.runInNewContext(read("data/enrichment.js"), context);
@@ -130,8 +146,7 @@ async function update() {
     official.push(...result.laureates);
     if (result.laureates.length < 200) break;
   }
-  if (official.length < 99)
-    throw new Error("Incomplete Nobel archive; local files were not changed.");
+  assertCompleteArchive(official, context.window.NOBEL_LAUREATES);
   const result = addNewLaureates(
     official,
     context.window.NOBEL_LAUREATES,
@@ -140,21 +155,21 @@ async function update() {
     new Date().toISOString().slice(0, 10),
   );
   if (result.added.length) {
-    fs.writeFileSync(
-      path.join(root, "data/laureates.js"),
+    write(
+      "data/laureates.js",
       `window.NOBEL_LAUREATES = ${JSON.stringify(result.people, null, 2)};\n`,
     );
-    fs.writeFileSync(
-      path.join(root, "data/enrichment.js"),
+    write(
+      "data/enrichment.js",
       `window.NOBEL_ENRICHMENT = ${JSON.stringify(result.enrichment, null, 2)};\n`,
     );
-    fs.writeFileSync(
-      path.join(root, "data/source-roster.json"),
+    write(
+      "data/source-roster.json",
       JSON.stringify(result.roster, null, 2) + "\n",
     );
   }
-  fs.writeFileSync(
-    path.join(root, "data/update-status.json"),
+  write(
+    "data/update-status.json",
     JSON.stringify(
       {
         checkedOn: new Date().toISOString().slice(0, 10),

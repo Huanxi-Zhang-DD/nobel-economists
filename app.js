@@ -56,8 +56,11 @@
     .querySelectorAll("[data-range]")
     .forEach((node) => (node.textContent = yearRange));
   $("latest-title").textContent = `The ${latestYear} laureates`;
+  const latestMotivation = data.find((person) => person.year === latestYear)?.prizeMotivation;
   if (latestYear > 2025)
-    $("latest-theme").textContent = "Discover the latest Nobel-recognized work";
+    $("latest-theme").textContent = latestMotivation
+      ? latestMotivation.replace(/^for\s+/i, "").replace(/^./, (letter) => letter.toUpperCase())
+      : "Discover the latest Nobel-recognized work";
   $("hero-art").setAttribute(
     "aria-label",
     `The ${latestYear} laureates: ${data

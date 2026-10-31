@@ -248,7 +248,7 @@ for (const record of enrichment) {
         assert(
           Number.isInteger(person.phdYear) &&
             person.phdYear >= 1850 &&
-            person.phdYear <= 2026,
+            person.phdYear <= new Date().getUTCFullYear(),
           `Invalid PhD year: ${person.name}`,
         );
       const key = `${person.laureateId || person.name.toLowerCase()}:${person.relationshipType}`;
@@ -318,7 +318,7 @@ assert(
   "CSS contains root-absolute asset URLs",
 );
 assert(
-  fs.existsSync(path.join(root, ".github/workflows/pages.yml")),
+  fs.existsSync(path.join(root, ".github/workflows/static.yml")),
   "Missing Pages workflow",
 );
 console.log(
