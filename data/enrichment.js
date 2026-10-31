@@ -2861,5 +2861,49 @@ window.NOBEL_ENRICHMENT = [
     "students": [],
     "advisors": [],
     "mentorshipNote": "No doctoral-student links are included in this documented sample. This does not establish that the economist had no students; classroom teaching, coauthorship and informal influence are not treated as doctoral supervision."
+  },
+  {
+    "id": "1070",
+    "draft": false,
+    "story": {
+      "title": "The expectations behind monetary policy",
+      "text": "Woodford studied at the University of Chicago and Yale Law School before earning his economics doctorate at MIT. At Columbia, his work on monetary policy and the role of expectations includes the treatise Interest and Prices. His research also explores how bounded rationality and imprecise mental representations influence economic decisions.",
+      "sources": [
+        {
+          "label": "Columbia: academic profile",
+          "url": "https://politicaleconomy.columbia.edu/directory/michael-woodford"
+        },
+        {
+          "label": "Royal Swedish Academy of Sciences: 2026 prize",
+          "url": "https://www.kva.se/en/news/the-prize-in-economic-sciences-2026/"
+        }
+      ],
+      "verifiedOn": "2026-10-31"
+    },
+    "students": [],
+    "advisors": [],
+    "mentorshipNote": "Doctoral relationships have not yet been reviewed for this newly added profile."
+  },
+  {
+    "id": "1069",
+    "draft": false,
+    "story": {
+      "title": "From household decisions to the wider economy",
+      "text": "Hall studied at Berkeley before earning his economics doctorate at MIT in 1967. His career took him through Berkeley and MIT to Stanford and the Hoover Institution. His research spans consumption, employment, technology, competition, and public policy, connecting questions about individual decisions to the behavior of the economy.",
+      "sources": [
+        {
+          "label": "Stanford: 2026 award profile",
+          "url": "https://news.stanford.edu/stories/2026/10/robert-e-hall-nobel-prize-economic-sciences"
+        },
+        {
+          "label": "Royal Swedish Academy of Sciences: 2026 prize",
+          "url": "https://www.kva.se/en/news/the-prize-in-economic-sciences-2026/"
+        }
+      ],
+      "verifiedOn": "2026-10-31"
+    },
+    "students": [],
+    "advisors": [],
+    "mentorshipNote": "Doctoral relationships have not yet been reviewed for this newly added profile."
   }
 ];

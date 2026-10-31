@@ -4,6 +4,8 @@ These local portrait photographs were downloaded on 6 October 2026. Academic and
 
 | Laureate | Local file | Credit | Source |
 | --- | --- | --- | --- |
+| Robert E. Hall (2026) | `1069-homepage.jpg` | Photo by Susan E. Woodward. Added 31 October 2026. | [Academic homepage](https://rehall.people.stanford.edu/) · [Original image](https://rehall.people.stanford.edu/sites/g/files/sbiybj24541/files/styles/responsive_large/public/media/image/robert-hall_0.jpeg?itok=LkscQH_N) |
+| Michael Woodford (2026) | `1070-homepage.png` | Portrait via Columbia University; photographer not identified on source page. Added 31 October 2026. | [Academic profile](https://politicaleconomy.columbia.edu/directory/michael-woodford) · [Original image](https://politicaleconomy.columbia.edu/sites/politicaleconomy.columbia.edu/files/content/MW_new.png) |
 | Joel Mokyr (2025) | `1058-homepage.jpg` | Portrait via Northwestern University; photographer not identified on source page. | [Fact page](https://economics.northwestern.edu/people/directory/joel-mokyr.html) · [Original image](https://economics.northwestern.edu/images/people/faculty/joel-mokyr-168x210.jpg) |
 | Philippe Aghion (2025) | `1059-homepage.jpg` | Portrait via Collège de France; photographer not identified on source page. | [Fact page](https://www.college-de-france.fr/fr/personne/philippe-aghion) · [Original image](https://www.college-de-france.fr/sites/default/files/media/portrait/2022-04/Philippe-Aghion_4.jpg) |
 | Peter Howitt (2025) | `1060-homepage.png` | Portrait via Brown University; photographer not identified on source page. | [Fact page](https://vivo.brown.edu/display/phowitt) · [Original image](https://vivo.brown.edu/profile-images/317/29/howitt_peter.png) |

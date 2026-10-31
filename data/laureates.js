@@ -1,5 +1,64 @@
 window.NOBEL_LAUREATES = [
   {
+    "id": "1069",
+    "name": "Robert E. Hall",
+    "year": 2026,
+    "sortOrder": 1,
+    "institution": "Stanford University",
+    "institutions": [
+      "Stanford"
+    ],
+    "institutionBasis": "affiliation at award",
+    "fields": [
+      "Macroeconomics",
+      "Labor",
+      "Public Economics"
+    ],
+    "contribution": "Hall connected household consumption decisions and the behavior of firms to fluctuations in the economy. His work helped establish how individual choices shape aggregate outcomes, improving the foundations for policies that respond to recessions, employment changes, and economic shocks.",
+    "nobelUrl": "https://www.nobelprize.org/prizes/economic-sciences/2026/hall/facts/",
+    "prizeShare": "1/2",
+    "homepage": "https://rehall.people.stanford.edu/",
+    "homepageType": "Academic homepage",
+    "homepageSource": "https://rehall.people.stanford.edu/",
+    "scholarUrl": "https://scholar.google.com/scholar?q=Robert%20E.%20Hall",
+    "portrait": "assets/portraits/1069-homepage.jpg",
+    "imageCredit": "Photo by Susan E. Woodward, via Robert Hall’s Stanford academic homepage.",
+    "imageSource": "https://rehall.people.stanford.edu/",
+    "imageOriginalUrl": "https://rehall.people.stanford.edu/sites/g/files/sbiybj24541/files/styles/responsive_large/public/media/image/robert-hall_0.jpeg?itok=LkscQH_N",
+    "portraitOrigin": "academic homepage",
+    "draft": false,
+    "prizeMotivation": "for microeconomic foundations of macroeconomic stabilisation"
+  },
+  {
+    "id": "1070",
+    "name": "Michael Woodford",
+    "year": 2026,
+    "sortOrder": 2,
+    "institution": "Columbia University",
+    "institutions": [
+      "Columbia"
+    ],
+    "institutionBasis": "affiliation at award",
+    "fields": [
+      "Macroeconomics",
+      "Monetary Economics"
+    ],
+    "contribution": "Woodford developed a framework for monetary policy in which households and firms look ahead when making economic decisions. His research explains how expectations about future policy affect spending and prices, helping central banks understand how communication and interest-rate decisions can stabilize inflation and economic activity.",
+    "nobelUrl": "https://www.nobelprize.org/prizes/economic-sciences/2026/woodford/facts/",
+    "prizeShare": "1/2",
+    "homepage": "https://politicaleconomy.columbia.edu/directory/michael-woodford",
+    "homepageType": "Academic homepage",
+    "homepageSource": "https://politicaleconomy.columbia.edu/directory/michael-woodford",
+    "scholarUrl": "https://scholar.google.com/scholar?q=Michael%20Woodford",
+    "portrait": "assets/portraits/1070-homepage.png",
+    "imageCredit": "Portrait via Columbia University academic profile; photographer not identified on source page.",
+    "imageSource": "https://politicaleconomy.columbia.edu/directory/michael-woodford",
+    "imageOriginalUrl": "https://politicaleconomy.columbia.edu/sites/politicaleconomy.columbia.edu/files/content/MW_new.png",
+    "portraitOrigin": "academic homepage",
+    "draft": false,
+    "prizeMotivation": "for microeconomic foundations of macroeconomic stabilisation"
+  },
+  {
     "id": "1058",
     "name": "Joel Mokyr",
     "year": 2025,

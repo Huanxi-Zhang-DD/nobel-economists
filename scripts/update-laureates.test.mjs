@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
-import { addNewLaureates } from "./update-laureates.mjs";
+import { addNewLaureates, assertCompleteArchive } from "./update-laureates.mjs";
 
 const root = new URL("../", import.meta.url);
 const context = { window: {} };
@@ -31,6 +31,7 @@ const fixture = {
       awardYear: "2026",
       sortOrder: "1",
       portion: "1",
+      motivation: { en: "for a verified test contribution" },
       affiliations: [],
       links: [
         {
@@ -53,6 +54,8 @@ assert.equal(update.people.length, people.length + 1);
 assert.equal(update.added[0].portrait, null);
 assert.equal(update.added[0].draft, true);
 assert.equal(update.added[0].homepage, null);
+assert.equal(update.added[0].prizeMotivation, "for a verified test contribution");
+assert.match(update.added[0].contribution, /for a verified test contribution/);
 assert.deepEqual(
   update.people.find((person) => person.id === people[0].id),
   people[0],
@@ -89,6 +92,13 @@ assert.throws(
     ),
   /Incomplete official record/,
 );
+const archive = people.map((person) => ({
+  id: person.id,
+  nobelPrizes: [{ category: { en: "Economic Sciences" } }],
+}));
+assert.doesNotThrow(() => assertCompleteArchive(archive, people));
+assert.throws(() => assertCompleteArchive(archive.slice(1), people), /Incomplete Nobel archive/);
+assert.throws(() => assertCompleteArchive(Array(101).fill(archive[0]), people), /Incomplete Nobel archive/);
 console.log(
   "PASS: new-entry import, duplicate API entries, idempotence, initials fallback, pending metadata, preserved manual edits, and incomplete-response rejection. Test fixtures are never written to site data.",
 );
